@@ -9,6 +9,7 @@ import Logout from './routes/Logout'
 import Post from './routes/Post'
 import PostForm from './routes/PostForm'
 import Posts from './routes/Posts'
+import Signup from './routes/Signup'
 
 const App = (): JSX.Element => {
   return (
@@ -30,6 +31,9 @@ const App = (): JSX.Element => {
       </Route>
       <Route exact path={AppRoutes.POST_TMPL}>
         <Post />
+      </Route>
+      <Route exact path={AppRoutes.SIGNUP}>
+        <Signup />
       </Route>
     </BrowserRouter>
   )

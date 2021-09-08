@@ -10,12 +10,12 @@ const addLoginEmployee = (app: Express): void => {
         const { email } = req.body
         if (!email) {
             console.log('No email provided')
-            return res.status(400).json({ message: 'email required' })
+            return res.status(400).json({ message: 'Adresse e-mail requise' })
         } else {
             const emailValid = regExs.email.test(email)
             if (!emailValid) {
                 console.log('Invalid email provided')
-                return res.status(400).json({ message: 'invalid email' })
+                return res.status(400).json({ message: 'Adresse e-mail invalide' })
             }
             else {
                 console.log('Email provided')
@@ -29,7 +29,7 @@ const addLoginEmployee = (app: Express): void => {
                     const { password } = req.body
                     if (!password) {
                         console.log('No password provided')
-                        res.status(400).json({ message: 'password required' })
+                        res.status(400).json({ message: 'Mot de passe requis' })
                     } else {
                         console.log('Password provided')
                         if (employee.password === password) {

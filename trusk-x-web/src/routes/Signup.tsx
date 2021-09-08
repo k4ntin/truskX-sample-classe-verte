@@ -14,15 +14,15 @@ import Submit from '../components/Submit'
 import TruskX from '../components/TruskX'
 import Button from '../components/Button'
 
-const Login = (): JSX.Element  => {
+const Signup = (): JSX.Element  => {
   const history = useHistory()
+
+  const goToLogin = () => {
+    history.replace(AppRoutes.LOGIN)
+  }
 
   const goToPosts = () => {
     history.replace(AppRoutes.POSTS)
-  }
-
-  const goToSignup = () => {
-    history.replace(AppRoutes.SIGNUP)
   }
 
   useEffect(() => {
@@ -33,10 +33,15 @@ const Login = (): JSX.Element  => {
 
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
+  const [name, setName] = useState('')
   const [password, setPassword] = useState('')
 
   const emailHandler = (event: ChangeEvent<HTMLInputElement>): void => {
     setEmail(event.target.value)
+  }
+
+  const nameHandler = (event: ChangeEvent<HTMLInputElement>): void => {
+    setName(event.target.value)
   }
 
   const passwordHandler = (event: ChangeEvent<HTMLInputElement>): void => {
@@ -44,8 +49,9 @@ const Login = (): JSX.Element  => {
   }
 
   const submitHandler = (): void => {
-    fetch(`${environment.apiBaseUrl}/employees/auth/login`, {
+    fetch(`${environment.apiBaseUrl}/employees`, {
       body: JSON.stringify({
+        name,
         email,
         password
       }),
@@ -56,18 +62,38 @@ const Login = (): JSX.Element  => {
       method: 'POST',
       mode: 'cors'
     })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data)
-        if (data.token) {
-          localStorage.setItem('token', data.token)
-          goToPosts()
-        } else {
-          setError(data.message)
+      .then((response) => {
+        if (response.status === 201)
+          fetch(`${environment.apiBaseUrl}/employees/auth/login`, {
+            body: JSON.stringify({
+              email,
+              password
+            }),
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            mode: 'cors'
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data)
+              if (data.token) {
+                localStorage.setItem('token', data.token)
+                goToPosts()
+              } else {
+                setError(data.message)
+              }
+            })
+            .catch((err: Error) => {
+              setError(err.message)
+            })
+        else {
+          response.json().then((data) => setError(data.code ? 'Adresse e-mail déjà enregistrée' : data.message))
         }
       })
       .catch((err: Error) => {
-        console.log(err)
         setError(err.message)
       })
   }
@@ -76,6 +102,16 @@ const Login = (): JSX.Element  => {
     <TruskX>
       <Form>
         <FieldsContainer>
+          <Field>
+            <Label>Nom</Label>
+            <Input
+              id='name'
+              onChange={nameHandler}
+              placeholder='Adrian'
+              type='string'
+              value={name}
+            />
+          </Field>
           <Field>
             <Label>Adresse e-mail</Label>
             <Input
@@ -98,11 +134,11 @@ const Login = (): JSX.Element  => {
           </Field>
         </FieldsContainer>
         <FormError error={error} />
-        <Submit label='Connexion' onClick={submitHandler} />
-        <Button id='signup' label='Inscription' onClick={goToSignup} />
+        <Submit label='Inscription' onClick={submitHandler} />
+        <Button id='login' label='Connexion' onClick={goToLogin} />
       </Form>
     </TruskX>
   )
 }
 
-export default Login
+export default Signup
