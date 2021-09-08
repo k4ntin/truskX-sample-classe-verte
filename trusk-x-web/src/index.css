@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'ITCAvantGarde';
+  src: local('ITCAvantGarde'), url(./fonts/ITCAvantGarde.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'ITCAvantGarde';
+  font-weight: 600;
+  src: local('ITCAvantGarde'), url(./fonts/ITCAvantGardeBold.ttf) format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: 'ITCAvantGarde', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
