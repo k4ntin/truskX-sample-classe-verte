@@ -10,8 +10,9 @@ Trusk X is a sample project used for
 |------|--------|------|
 | FEA001 | Employee signup | https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/1 |
 | FEA002 | Employee login | https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/2 |
-| FEA003 | Post creation | https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/3 |
-| FEA004 | Posts list | https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/4 |
+| FEA003 | Logout | https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/3 |
+| FEA004 | Post creation | https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/4 |
+| FEA005 | Posts list | https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/5 |
 
 # 'Classe verte'
 
