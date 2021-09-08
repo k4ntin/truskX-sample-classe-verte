@@ -26,12 +26,12 @@ On écrit des acceptance tests automatiques en amont
 On lance les tests pour voir qu'on a pas d'erreur de compilation
 On code l'évolution avec les tests en //
 
-### FEA005 - Enable employees to see a post details specific view
+### FEA0056 - Enable employees to see a post details specific view
 
-https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/5
+https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/6
 
 ## Scenario 2 - Nouvelle feature qui impacte la non regression (workshop)
 
-### FEA006 - Require employee phone number for registration
+### FEA007 - Require employee phone number for registration
 
-https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/6
+https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/7
