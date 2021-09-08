@@ -12,7 +12,7 @@ const StyledInput = styled.input`
   font-size: 1rem;
   font-weight: 350;
   height: 30px;
-  min-width: 250px;
+  min-width: 230px;
   outline: none;
   padding: 8px;
   width: calc(100% - 16px);

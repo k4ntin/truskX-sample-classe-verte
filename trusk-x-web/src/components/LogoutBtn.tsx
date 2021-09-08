@@ -26,7 +26,11 @@ const FloatingActionButton = styled.div`
   position: fixed;
 `
 
-const LogoutIcon = styled.img``
+const LogoutIcon = styled.img`
+  height: 30px;
+  object-fit: cover;
+  width: 30px;
+`
 
 const LogoutBtn = (): JSX.Element => {
   const history = useHistory()
@@ -37,7 +41,7 @@ const LogoutBtn = (): JSX.Element => {
 
   return (
     <FloatingActionButton id='logout' onClick={goToLogout}>
-      <LogoutIcon alt='logout icon' src='/images/logout.png' width={30} />
+      <LogoutIcon alt='logout icon' src='/images/logout.png'/>
     </FloatingActionButton>
   )
 }

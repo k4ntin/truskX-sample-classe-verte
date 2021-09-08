@@ -46,3 +46,9 @@ Feature: Employee login
     Then Adrian is not redirected to posts list
     And Adrian is still on login
     And Adrian is warned that a password is required
+
+  @fea002 @nr
+  Scenario: From login employees could go to signup
+    When Someone is on login
+    And Someone clicks on signup button
+    Then Someone is redirected to signup

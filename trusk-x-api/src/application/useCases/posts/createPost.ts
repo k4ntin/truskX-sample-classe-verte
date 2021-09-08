@@ -10,14 +10,14 @@ const addCreatePost = (app: Express): void => {
         const { title } = req.body
         if (!title) {
             console.log('No title provided')
-            return res.status(400).json({ message: 'title required' })
+            return res.status(400).json({ message: 'Titre requis' })
         }
         else {
             console.log('Title provided')
             const { body } = req.body
             if (!body) {
                 console.log('No body provided')
-                return res.status(400).json({ message: 'body required' })
+                return res.status(400).json({ message: 'Contenu requis' })
             }
             else {
                 console.log('Body provided')

@@ -15,6 +15,7 @@ import Submit from '../components/Submit'
 import TruskX from '../components/TruskX'
 import LogoutBtn from '../components/LogoutBtn'
 import Textarea from '../components/Textarea'
+import Button from '../components/Button'
 
 const PostForm = (): JSX.Element  => {
   const history = useHistory()
@@ -95,6 +96,7 @@ const PostForm = (): JSX.Element  => {
         </FieldsContainer>
         <FormError error={error} />
         <Submit label='Envoyer' onClick={submitHandler} />
+        <Button id='cancel' label='Annuler' onClick={goToPosts} />
       </Form>
       <LogoutBtn />
     </TruskX>
