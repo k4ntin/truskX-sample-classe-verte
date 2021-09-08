@@ -1,14 +1,14 @@
 @posts @form
 Feature: Post form
 
-  @fea003 @nr
+  @fea004 @nr
   Scenario: Registered employee create post success
     Given Adrian is a registered employee
     And Adrian is connected to TruskX
     When Adrian creates a new post
     Then Adrian is redirected to posts list
 
-  @fea003 @nr
+  @fea004 @nr
   Scenario: Registered employee create post without title failure
     Given Adrian is a registered employee
     And Adrian is connected to TruskX
@@ -17,7 +17,7 @@ Feature: Post form
     And Adrian is still on post form
     And Adrian is warned that a title is required
 
-  @fea003 @nr
+  @fea004 @nr
   Scenario: Registered employee create post without body failure
     Given Adrian is a registered employee
     And Adrian is connected to TruskX
@@ -26,7 +26,7 @@ Feature: Post form
     And Adrian is still on post form
     And Adrian is warned that a body is required
 
-  @fea002 @nr
+  @fea004 @nr
   Scenario: From post form employees could go to posts list
     Given Adrian is a registered employee
     And Adrian is connected to TruskX

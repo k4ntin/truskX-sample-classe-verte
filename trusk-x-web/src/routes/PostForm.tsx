@@ -34,6 +34,7 @@ const PostForm = (): JSX.Element  => {
       .then((response) => response.json())
       .then((data) => setAuthor(data))
       .catch(() => goToLogin())
+    else goToLogin()
   }, [])
 
   const [author, setAuthor] = useState<IEmployee | null>(null)

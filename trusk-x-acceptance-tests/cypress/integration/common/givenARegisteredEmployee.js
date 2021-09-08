@@ -8,7 +8,7 @@ Given(/^(.*) is a registered employee$/, async function (employeeName) {
   })
   const randomLastNameCapitalized = randomLastName.charAt(0).toUpperCase() + randomLastName.slice(1)
   const employeeCompleteName = `${employeeName} ${randomLastNameCapitalized}`
-  const employeeEmail = `${employeeCompleteName.toLowerCase().replaceAll(' ', '.')}@trusk.com`
+  const employeeEmail = `${employeeCompleteName.toLowerCase().replace(' ', '.')}@trusk.com`
   const employeeBody = {
     name: employeeCompleteName,
     email: employeeEmail,

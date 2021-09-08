@@ -82,12 +82,12 @@ const PostsList = (props: PostsProps): JSX.Element => {
           const postIndex = props.posts.indexOf(post)
 
           return (
-            <PostWrapper id={`post-wrapper-${postIndex}`} key={post._id}>
+            <PostWrapper className='post-wrapper' id={`post-wrapper-${postIndex}`} key={post._id}>
               <PostGrid>
-                <PostTitle id={`post-title-${postIndex}`}>{post.title}</PostTitle>
+                <PostTitle className='post-title' id={`post-title-${postIndex}`}>{post.title}</PostTitle>
                 <PostDetails>
-                  <PostDetail id={`post-author-${postIndex}`}>par {post.author.name}</PostDetail>
-                  <PostDetail id={`post-date-${postIndex}`}>&nbsp;le {new Date(post.createdAt).toLocaleDateString()}</PostDetail>
+                  <PostDetail className='post-author' id={`post-author-${postIndex}`}>par {post.author.name}</PostDetail>
+                  <PostDetail className='post-date' id={`post-date-${postIndex}`}>&nbsp;le {new Date(post.createdAt).toLocaleDateString()}</PostDetail>
                 </PostDetails>
               </PostGrid>
             </PostWrapper>
