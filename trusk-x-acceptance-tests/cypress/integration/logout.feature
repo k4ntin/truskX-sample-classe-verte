@@ -1,4 +1,4 @@
-@logout
+@logout @nr
 Feature: Employee logout
 
   @fea003

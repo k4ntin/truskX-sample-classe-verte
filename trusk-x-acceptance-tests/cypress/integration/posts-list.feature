@@ -1,4 +1,4 @@
-@posts @list
+@posts @list @nr
 Feature: Posts list
 
   @fea005
