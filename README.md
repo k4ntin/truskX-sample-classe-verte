@@ -67,3 +67,9 @@ https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/5
 ### FEA007 - Require employee phone number for registration
 
 https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/6
+
+## Scenario 3 - Get it by yourself
+
+### ENH001 - Employees cannot signup with phone number that is already registered
+
+
