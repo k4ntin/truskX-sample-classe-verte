@@ -32,6 +32,9 @@ const App = (): JSX.Element => {
       <Route exact path={AppRoutes.POST_TMPL}>
         <Post />
       </Route>
+      <Route exact path={AppRoutes.POST_TMPL}>
+        <Post />
+      </Route>
       <Route exact path={AppRoutes.SIGNUP}>
         <Signup />
       </Route>
