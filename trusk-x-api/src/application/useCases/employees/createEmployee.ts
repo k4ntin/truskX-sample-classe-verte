@@ -26,16 +26,22 @@ const addCreateEmployee = (app: Express): void => {
                     console.log('Invalid email provided')
                     return res.status(400).json({ message: 'Adresse e-mail invalide' })
                 } else {
-                    const { password } = req.body
-                    if (!password) {
-                        console.log('No password provided')
-                        res.status(400).json({ message: 'Mot de passe requis' })
-                    }
-                    else {
-                        console.log('Password provided')
-                        employeesService.createNewEmployee({ name, email, password } as IEmployee)
-                            .then((output) => res.status(201).json(output))
-                            .catch((output) => res.status(500).send(output))
+                    const {phone} = req.body
+                    if (!phone) {
+                        console.log('No phone provided')
+                        return res.status(400).json({ message: 'Téléphone requis' })
+                    } else {
+                        const { password } = req.body
+                        if (!password) {
+                            console.log('No password provided')
+                            res.status(400).json({ message: 'Mot de passe requis' })
+                        }
+                        else {
+                            console.log('Password provided')
+                            employeesService.createNewEmployee({ name, email, phone, password } as IEmployee)
+                                .then((output) => res.status(201).json(output))
+                                .catch((output) => res.status(500).send(output))
+                        }
                     }
                 }
             }
