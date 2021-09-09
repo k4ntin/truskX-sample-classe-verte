@@ -35,6 +35,7 @@ const Signup = (): JSX.Element  => {
   const [error, setError] = useState('')
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
+  const [phone, setPhone] = useState('')
 
   const emailHandler = (event: ChangeEvent<HTMLInputElement>): void => {
     setEmail(event.target.value)
@@ -48,11 +49,16 @@ const Signup = (): JSX.Element  => {
     setPassword(event.target.value)
   }
 
+  const phoneHandler = (event: ChangeEvent<HTMLInputElement>): void => {
+    setPhone(event.target.value)
+  }
+
   const submitHandler = (): void => {
     fetch(`${environment.apiBaseUrl}/employees`, {
       body: JSON.stringify({
         name,
         email,
+        phone,
         password
       }),
       headers: {
@@ -120,6 +126,16 @@ const Signup = (): JSX.Element  => {
               placeholder='adrian@trusk.com'
               type='string'
               value={email}
+            />
+          </Field>
+          <Field>
+            <Label>Téléphone</Label>
+            <Input
+              id='phone'
+              onChange={phoneHandler}
+              placeholder='06********'
+              type='string'
+              value={phone}
             />
           </Field>
           <Field>
