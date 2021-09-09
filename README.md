@@ -4,6 +4,36 @@ Trusk X is a sample project used for
 - QA candidates technical test
 - 'Classe verte' BDD workflow
 
+# Get started
+
+## Run Socket.IO events server
+
+```
+cd trusk-x-socket-io
+yarn start
+```
+
+## Run API server
+
+```
+cd trusk-x-api
+yarn start
+```
+
+## Run Web app
+
+```
+cd trusk-x-web
+yarn start
+```
+
+## Run Acceptance tests
+
+```
+cd trusk-x-acceptance-tests
+yarn cy:run
+```
+
 # List of features
 
 | code | resumé | lien |
