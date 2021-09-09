@@ -28,10 +28,10 @@ On code l'évolution avec les tests en //
 
 ### FEA0056 - Enable employees to see a post details specific view
 
-https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/6
+https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/5
 
 ## Scenario 2 - Nouvelle feature qui impacte la non regression (workshop)
 
 ### FEA007 - Require employee phone number for registration
 
-https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/7
+https://github.com/AdrianP-Trusk/truskX-sample-classe-verte/issues/6
