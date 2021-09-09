@@ -17,4 +17,4 @@ Feature: Post details
         Then Adrian could see post title
         Then Adrian could see post body
         Then Adrian could see post author
-        Then Adrian could see post data
+        Then Adrian could see post date
