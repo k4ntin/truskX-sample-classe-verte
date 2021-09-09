@@ -31,6 +31,14 @@ Feature: Employee signup
     And Adrian is still on signup
     And Adrian is warned that an email is required
 
+  @fea007
+  Scenario: Employee signup without phone failure
+    Given Adrian is an employee
+    When Adrian registers to TruskX without phone
+    Then Adrian is not redirected to posts list
+    And Adrian is still on signup
+    And Adrian is warned that a phone is required
+
   @fea001
   Scenario: Employee signup without password failure
     Given Adrian is an employee

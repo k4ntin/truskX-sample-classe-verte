@@ -1,7 +1,7 @@
 import { When } from 'cypress-cucumber-preprocessor/steps';
 import randomstring from 'randomstring';
 
-When(/^(.*) connects to TruskX with a bad password$/, async function (context, employeeName) {
+When(/^(.*) connects to TruskX with a bad password$/, async function (employeeName) {
   const randomPassword = randomstring.generate({
     length: 6,
     charset: 'alphabetic'
