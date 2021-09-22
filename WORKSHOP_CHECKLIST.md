@@ -3,6 +3,10 @@
 - [ ] Install dependencies with `npm install` or `yarn install`
 - [ ] Run applications's infra by running `npm run dev` or `yarn dev`
 - [ ] Open a web browser to http://localhost:3000/ and verify that the login form displays
+- [ ] Run this curl command to create a test user `curl 'http://localhost:5000/employees' \
+  -H 'Content-Type: application/json' \
+  --data-raw '{"name":"Adrian Pothuaud","email":"adrian@trusk.com","password":"password"}' \
+  --compressed`
 - [ ] Log in with adrian@trusk.com/password, you should be logged in and redirected to http://localhost:3000/posts
 
 In case of any problem during these steps feel free to contact me !
