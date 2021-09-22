@@ -17,8 +17,8 @@ require('dotenv').config()
 module.exports = (on, config) => {
   on('file:preprocessor', cucumber())
 
-  config.env.apiBaseUrl = process.env.API_BASE_URL
-  config.env.baseUrl = process.env.BASE_URL
+  config.env.apiBaseUrl = 'http://localhost:5000'
+  config.env.baseUrl = 'http://localhost:3000'
 
   return config
 }

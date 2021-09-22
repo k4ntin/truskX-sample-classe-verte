@@ -1,6 +1,6 @@
-import dotenv from 'dotenv'
-
-dotenv.config()
+// import dotenv from 'dotenv'
+//
+// dotenv.config()
 
 interface IEnvironment {
     jwtSecret: string
@@ -11,11 +11,11 @@ interface IEnvironment {
 }
 
 const environment: IEnvironment = {
-    jwtSecret: process.env.JWT_SECRET as string,
-    mongooseConnectionString: process.env.MONGOOSE_CONNECTION_STRING as string,
-    saltRounds: process.env.SALT_ROUNDS as string,
-    serverHttpPort: process.env.SERVER_HTTP_PORT as string,
-    socketsBaseUrl: process.env.SOCKETS_BASE_URL as string,
+    jwtSecret: '8nkhJN&L0#*h',
+    mongooseConnectionString: 'mongodb://localhost:27017/truskx',
+    saltRounds: '8',
+    serverHttpPort: '5000',
+    socketsBaseUrl: 'http://localhost:5055',
 }
 
 export default environment

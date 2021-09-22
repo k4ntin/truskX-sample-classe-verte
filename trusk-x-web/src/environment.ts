@@ -4,8 +4,8 @@ interface IEnvironment {
 }
 
 const environment: IEnvironment = {
-  apiBaseUrl: process.env.REACT_APP_API_BASE_URL as string,
-  socketsBaseUrl: process.env.REACT_APP_SOCKETS_BASE_URL as string,
+  apiBaseUrl: 'http://localhost:5000',
+  socketsBaseUrl: 'http://localhost:5055',
 }
 
 export default environment

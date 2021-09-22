@@ -1,13 +1,13 @@
-import dotenv from 'dotenv'
-
-dotenv.config()
+// import dotenv from 'dotenv'
+//
+// dotenv.config()
 
 interface IEnvironment {
     serverHttpPort: string
 }
 
 const environment: IEnvironment = {
-    serverHttpPort: process.env.SERVER_HTTP_PORT as string,
+    serverHttpPort: '5055',
 }
 
 export default environment
