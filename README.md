@@ -8,6 +8,10 @@ Trusk X is a sample project used for
 
 # Get started
 
+## MongoDB
+
+Local mongodb installation should be started.
+
 ## Run Socket.IO events server
 
 ```
